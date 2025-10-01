@@ -38,6 +38,9 @@ export function Footer() {
                 <a href={`mailto:${companyInfo.email}`} className="hover:text-primary transition-colors">{companyInfo.email}</a>
               </li>
               <li>
+                <a href={`mailto:${companyInfo.altEmail}`} className="hover:text-primary transition-colors">{companyInfo.altEmail}</a>
+              </li>
+              <li>
                 <a href={`tel:${companyInfo.phone}`} className="hover:text-primary transition-colors">{companyInfo.phone}</a>
               </li>
             </ul>
