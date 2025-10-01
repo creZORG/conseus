@@ -14,8 +14,8 @@ export const companyInfo = {
     name: "Conquistar Enterprises Limited",
     slogan: "Reliability in Every Shipment",
     phone: "+254 725 864 171",
-    email: "conquistar91@gmail.com",
-    altEmail: "supply@conquistar.co.ke",
+    email: "supply@conquistar.co.ke",
+    altEmail: "conquistar91@gmail.com",
     address: "Kahawa Wendani, Nina House",
     poBox: "P.O BOX 725864171 – 00100",
     whatsapp: "254725864171"
