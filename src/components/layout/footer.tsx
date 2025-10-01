@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 w-fit">
-                <Logo className="h-8 w-8 text-primary" />
+                <Logo className="h-10 w-auto" height={40} width={40} />
                 <span className="font-bold text-xl font-headline">{companyInfo.name}</span>
             </Link>
             <p className="text-muted-foreground max-w-sm">{companyInfo.slogan}</p>

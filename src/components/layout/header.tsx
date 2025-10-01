@@ -19,7 +19,7 @@ export function Header() {
     <header className="bg-card/80 backdrop-blur-lg sticky top-0 z-50 border-b">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Logo className="h-8 w-8 text-primary" />
+          <Logo className="h-10 w-auto" height={40} width={40} />
           <span className="hidden font-bold sm:inline-block font-headline">
             {companyInfo.name}
           </span>
@@ -53,7 +53,7 @@ export function Header() {
                 <div className="flex flex-col h-full">
                     <div className="border-b pb-4">
                         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                            <Logo className="h-8 w-8 text-primary" />
+                            <Logo className="h-10 w-auto" height={40} width={40} />
                             <span className="font-bold font-headline">{companyInfo.name}</span>
                         </Link>
                     </div>

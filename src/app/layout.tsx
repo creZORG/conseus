@@ -7,8 +7,12 @@ import { Toaster } from '@/components/ui/toaster';
 import { FloatingContact } from '@/components/floating-contact';
 
 export const metadata: Metadata = {
-  title: 'Conquistar Enterprises Limited',
-  description: 'Reliability in Every Shipment',
+  title: {
+    default: 'Conquistar Enterprises | Reliable Supply of Food, Construction & Electronics',
+    template: '%s | Conquistar Enterprises Limited'
+  },
+  description: 'Conquistar Enterprises Limited is a premier supply company in Kenya, offering reliable sourcing and delivery of foodstuffs, cereals, construction materials, electronics, and more. Your trusted partner for quality goods.',
+  keywords: ['supply company Kenya', 'food suppliers', 'cereal suppliers', 'construction materials Kenya', 'electronics suppliers', 'educational lab equipment', 'electrical products', 'stationery suppliers', 'Conquistar Enterprises'],
   icons: {
     icon: '/favicon.ico',
   },
