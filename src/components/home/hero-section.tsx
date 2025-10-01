@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { heroSlides, companyInfo } from "@/lib/data";
@@ -10,21 +12,23 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 export function HeroSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Carousel
         className="w-full h-full"
-        plugins={[
-          Autoplay({
-            delay: 5000,
-            stopOnInteraction: true,
-          }),
-        ]}
+        plugins={[plugin.current]}
         opts={{
           loop: true,
         }}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="h-full">
           {heroSlides.map((slide) => (
