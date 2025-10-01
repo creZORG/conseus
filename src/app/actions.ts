@@ -1,12 +1,19 @@
 "use server";
 
 import { generateProductCatalog } from "@/ai/flows/generate-product-catalog";
-import { products } from "@/lib/data";
 import { z } from "zod";
 
 export async function handleGenerateCatalog() {
   try {
-    const productDescriptions = products.map(p => `${p.name}: ${p.description}`);
+    const productDescriptions = [
+        "Foodstuffs: Cooking oil, Rice, Sugar, spices",
+        "Cereals: Beans, maize, almonds, peanuts",
+        "Construction materials: stones, wood, concrete, steel, bricks, Glass",
+        "Electronics: Laptops, computers, printers",
+        "Lab equipments: test tubes, beakers, pipettes, Fire extinguishers",
+        "Electronic materials: Translators, Conductors, Insulators",
+        "Stationary: papers, pen, pencil, envelopes, notebooks, staples"
+    ];
     const result = await generateProductCatalog({ productDescriptions });
     return { success: true, data: result.catalogPdfDataUri };
   } catch (error) {
