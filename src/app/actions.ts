@@ -1,26 +1,6 @@
 "use server";
 
-import { generateProductCatalog } from "@/ai/flows/generate-product-catalog";
 import { z } from "zod";
-
-export async function handleGenerateCatalog() {
-  try {
-    const productDescriptions = [
-      "Foodstuffs: Cooking oil, Rice, Sugar, spices",
-      "Cereals: Beans, maize, almonds, peanuts",
-      "Construction materials: stones, wood, concrete, steel, bricks, Glass",
-      "Electronics: Laptops, computers, printers",
-      "Lab equipments: test tubes, beakers, pipettes, Fire extinguishers",
-      "Electronic materials: Translators, Conductors, Insulators",
-      "Stationary: papers, pen, pencil, envelopes, notebooks, staples",
-    ];
-    const result = await generateProductCatalog({ productDescriptions });
-    return { success: true, data: result.catalogHtml };
-  } catch (error) {
-    console.error("Error generating catalog:", error);
-    return { success: false, error: "Failed to generate catalog." };
-  }
-}
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),

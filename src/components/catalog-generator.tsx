@@ -4,7 +4,7 @@ import { useState } from "react";
 import { DownloadCloud, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { handleGenerateCatalog } from "@/app/actions";
+import { jsPDF } from "jspdf";
 
 export function CatalogGenerator() {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,23 +13,59 @@ export function CatalogGenerator() {
   const onGenerate = async () => {
     setIsLoading(true);
     try {
-      const result = await handleGenerateCatalog();
+      const doc = new jsPDF();
 
-      if (result.success && result.data) {
-        const newWindow = window.open();
-        if (newWindow) {
-          newWindow.document.write(result.data);
-          newWindow.document.close();
-        } else {
-            throw new Error("Could not open new window. Please disable your pop-up blocker.");
+      // Title
+      doc.setFontSize(22);
+      doc.text("Product Catalog", 20, 20);
+
+      doc.setFontSize(16);
+      let y = 40; // vertical position tracker
+
+      // Catalog Data
+      const catalog: Record<string, string[]> = {
+        "Foodstuffs": ["Cooking oil", "Rice", "Sugar", "Spices"],
+        "Cereals": ["Beans", "Maize", "Almonds", "Peanuts"],
+        "Construction materials": ["Stones", "Wood", "Concrete", "Steel", "Bricks", "Glass"],
+        "Electronics": ["Laptops", "Computers", "Printers"],
+        "Lab equipments": ["Test tubes", "Beakers", "Pipettes", "Fire extinguishers"],
+        "Electronic materials": ["Translators", "Conductors", "Insulators"],
+        "Stationary": ["Papers", "Pen", "Pencil", "Envelopes", "Notebooks", "Staples"]
+      };
+
+      // Loop through each category
+      for (const category in catalog) {
+        if (Object.prototype.hasOwnProperty.call(catalog, category)) {
+            doc.setFont("helvetica", "bold");
+            doc.text(category + ":", 20, y);
+            y += 10;
+
+            doc.setFont("helvetica", "normal");
+            catalog[category].forEach(item => {
+                // If page overflows, create a new page
+                if (y > 270) {
+                    doc.addPage();
+                    y = 20;
+                    doc.setFont("helvetica", "bold");
+                    doc.text(category + ": (continued)", 20, y);
+                    y += 10;
+                    doc.setFont("helvetica", "normal");
+                }
+                doc.text("- " + item, 30, y);
+                y += 8;
+            });
+
+            y += 6; // extra spacing between categories
         }
-        toast({
-          title: "Success",
-          description: "Your product catalog has been generated in a new tab.",
-        });
-      } else {
-        throw new Error(result.error || "An unknown error occurred.");
       }
+
+      // Download the PDF
+      doc.save("catalog.pdf");
+      toast({
+          title: "Success",
+          description: "Your product catalog has been downloaded.",
+      });
+
     } catch (error) {
       console.error("Failed to generate catalog:", error);
       toast({
@@ -49,7 +85,7 @@ export function CatalogGenerator() {
       ) : (
         <DownloadCloud className="mr-2 h-5 w-5" />
       )}
-      {isLoading ? "Generating Catalog..." : "Generate & View Catalog"}
+      {isLoading ? "Generating Catalog..." : "Download Catalog PDF"}
     </Button>
   );
 }
