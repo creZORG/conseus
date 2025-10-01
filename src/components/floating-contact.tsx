@@ -1,4 +1,4 @@
-import { Phone, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare, Mail } from "lucide-react";
 import Link from "next/link";
 import { companyInfo } from "@/lib/data";
 import {
@@ -15,6 +15,12 @@ export function FloatingContact() {
       icon: MessageSquare,
       label: "WhatsApp",
       target: "_blank",
+    },
+    {
+      href: `mailto:${companyInfo.email1}`,
+      icon: Mail,
+      label: "Email",
+      target: "_self",
     },
     {
       href: `tel:${companyInfo.phone}`,

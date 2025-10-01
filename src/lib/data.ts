@@ -14,6 +14,8 @@ export const companyInfo = {
     name: "Conquistar Enterprises Limited",
     slogan: "Reliability in Every Shipment",
     phone: "+254 725 864 171",
+    email1: "supply@conquistar.co.ke",
+    email2: "conquistar91@gmail.com",
     poBox: "P.O BOX 725864171 – 00100",
     whatsapp: "254725864171"
 }
@@ -180,6 +182,7 @@ export const certifications = [
 
 
 export const contactMethods = [
+    { icon: Mail, label: "Email", value: companyInfo.email1, href: `mailto:${companyInfo.email1}` },
     { icon: Phone, label: "Phone", value: companyInfo.phone, href: `tel:${companyInfo.phone}` },
     { icon: MapPin, label: "Address", value: companyInfo.poBox }
 ];
