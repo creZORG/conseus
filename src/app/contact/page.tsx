@@ -40,11 +40,6 @@ export default function ContactPage() {
                                 ) : (
                                     <p className="text-muted-foreground">{method.value}</p>
                                 )}
-                                {method.label === "Email" && companyInfo.altEmail && (
-                                     <Link href={`mailto:${companyInfo.altEmail}`} className="text-muted-foreground hover:text-primary transition-colors block">
-                                         {companyInfo.altEmail}
-                                     </Link>
-                                )}
                             </div>
                         </div>
                     ))}

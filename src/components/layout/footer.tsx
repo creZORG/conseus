@@ -35,12 +35,6 @@ export function Footer() {
             <ul className="space-y-2 text-muted-foreground">
               <li>{companyInfo.poBox}</li>
               <li className="pt-2">
-                <a href={`mailto:${companyInfo.email}`} className="hover:text-primary transition-colors">{companyInfo.email}</a>
-              </li>
-              <li>
-                <a href={`mailto:${companyInfo.altEmail}`} className="hover:text-primary transition-colors">{companyInfo.altEmail}</a>
-              </li>
-              <li>
                 <a href={`tel:${companyInfo.phone}`} className="hover:text-primary transition-colors">{companyInfo.phone}</a>
               </li>
             </ul>
