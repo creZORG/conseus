@@ -67,7 +67,7 @@ export default function ContactPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <div className="bg-background/80 backdrop-blur-sm p-6 rounded-lg shadow-2xl">
                 <h3 className="text-2xl font-bold">Our Office</h3>
-                <p className="text-muted-foreground mt-2">{companyInfo.address}</p>
+                <p className="text-muted-foreground mt-2">{companyInfo.poBox}</p>
             </div>
         </div>
       </div>

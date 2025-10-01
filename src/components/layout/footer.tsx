@@ -33,7 +33,6 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 font-headline">Contact Us</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>{companyInfo.address}</li>
               <li>{companyInfo.poBox}</li>
               <li className="pt-2">
                 <a href={`mailto:${companyInfo.email}`} className="hover:text-primary transition-colors">{companyInfo.email}</a>
