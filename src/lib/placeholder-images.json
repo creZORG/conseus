@@ -1,3 +1,124 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-shipments",
+      "description": "A large cargo ship on the ocean, representing global shipments.",
+      "imageUrl": "https://images.unsplash.com/photo-1632517306067-b54ab4d1f98d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FyZ28lMjBzaGlwfGVufDB8fHx8MTc1OTI0NjkzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cargo ship"
+    },
+    {
+      "id": "hero-food",
+      "description": "A vibrant market stall with fresh food supplies.",
+      "imageUrl": "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnJlc2glMjBmb29kfGVufDB8fHx8MTc1OTIzMjE3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fresh food"
+    },
+    {
+      "id": "hero-construction",
+      "description": "A construction site with cranes and building materials.",
+      "imageUrl": "https://images.unsplash.com/photo-1694521787162-5373b598945c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc1OTI1NDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
+    },
+    {
+      "id": "hero-electronics",
+      "description": "A collection of modern electronic devices.",
+      "imageUrl": "https://images.unsplash.com/photo-1631863552122-3072cf599a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbGVjdHJvbmljJTIwZGV2aWNlc3xlbnwwfHx8fDE3NTkzMDA2Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronic devices"
+    },
+    {
+      "id": "product-foodstuffs",
+      "description": "Assortment of various foodstuffs.",
+      "imageUrl": "https://images.unsplash.com/photo-1622257892554-c162e47a3a5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb29kJTIwdmFyaWV0eXxlbnwwfHx8fDE3NTkxOTYxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food variety"
+    },
+    {
+      "id": "product-cereals",
+      "description": "Bags of different types of cereals and grains.",
+      "imageUrl": "https://images.unsplash.com/photo-1601646352571-bda1c64f2071?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjZXJlYWwlMjBncmFpbnN8ZW58MHx8fHwxNzU5MzAwNjI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cereal grains"
+    },
+    {
+      "id": "product-electronics",
+      "description": "Various consumer electronics on display.",
+      "imageUrl": "https://images.unsplash.com/photo-1547489401-fcada4966052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb25zdW1lciUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTc1OTI0MjA4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "consumer electronics"
+    },
+    {
+      "id": "product-construction",
+      "description": "Stack of construction materials like bricks and wood.",
+      "imageUrl": "https://images.unsplash.com/photo-1580810734898-5e1753f23337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxidWlsZGluZyUyMG1hdGVyaWFsc3xlbnwwfHx8fDE3NTkyNzQwMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "building materials"
+    },
+    {
+      "id": "product-lab",
+      "description": "Modern educational science laboratory equipment.",
+      "imageUrl": "https://images.unsplash.com/photo-1608037222022-62649819f8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2llbmNlJTIwbGFib3JhdG9yeXxlbnwwfHx8fDE3NTkyODM3MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science laboratory"
+    },
+    {
+      "id": "product-electrical",
+      "description": "Collection of electrical components and products.",
+      "imageUrl": "https://images.unsplash.com/photo-1724638197371-f9e41d713b7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVjdHJpY2FsJTIwY29tcG9uZW50c3xlbnwwfHx8fDE3NTkyNTU4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electrical components"
+    },
+    {
+      "id": "product-stationery",
+      "description": "An organized desk with various stationery items.",
+      "imageUrl": "https://images.unsplash.com/photo-1584628804694-e400757bbca9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvZmZpY2UlMjBzdGF0aW9uZXJ5fGVufDB8fHx8MTc1OTMwMDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office stationery"
+    },
+    {
+      "id": "why-choose-us",
+      "description": "A diverse team of professionals in a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBtZWV0aW5nfGVufDB8fHx8MTc1OTIzMjcwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "team-photo",
+      "description": "A professional and smiling corporate team.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTc1OTI0NTUyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate team"
+    },
+    {
+      "id": "certification-1",
+      "description": "Official company registration certificate.",
+      "imageUrl": "https://images.unsplash.com/photo-1568137224279-f19f0f825447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjZXJ0aWZpY2F0ZSUyMGRvY3VtZW50fGVufDB8fHx8MTc1OTMwMDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate document"
+    },
+    {
+      "id": "certification-2",
+      "description": "Quality assurance approval seal.",
+      "imageUrl": "https://images.unsplash.com/photo-1742691857645-b2d01159e169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWFsaXR5JTIwc2VhbHxlbnwwfHx8fDE3NTkzMDA2Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quality seal"
+    },
+    {
+      "id": "blog-1",
+      "description": "A container port with ships being loaded.",
+      "imageUrl": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb250YWluZXIlMjBwb3J0fGVufDB8fHx8MTc1OTMwMDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "container port"
+    },
+    {
+      "id": "blog-2",
+      "description": "A warehouse filled with neatly stacked boxes.",
+      "imageUrl": "https://images.unsplash.com/photo-1569062980724-23e1063d8790?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3YXJlaG91c2UlMjBzdG9ja3xlbnwwfHx8fDE3NTkyNzU3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "warehouse stock"
+    },
+    {
+      "id": "blog-3",
+      "description": "Close up of a hand signing a contract.",
+      "imageUrl": "https://images.unsplash.com/photo-1726594701898-c420e01a3a62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2lnbmluZyUyMGNvbnRyYWN0fGVufDB8fHx8MTc1OTMwMDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "signing contract"
+    },
+    {
+      "id": "map-location",
+      "description": "A map showing a pinned location for the office.",
+      "imageUrl": "https://images.unsplash.com/photo-1538514860079-8443cff3cb21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYXAlMjBwaW58ZW58MHx8fHwxNzU5MjI2NTM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map pin"
+    },
+    {
+      "id": "about-hero",
+      "description": "Modern office building exterior.",
+      "imageUrl": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NTkyNjg4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office building"
+    }
+  ]
 }
