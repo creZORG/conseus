@@ -1,7 +1,7 @@
 import { SendMailClient } from "zeptomail";
 import { companyInfo } from "./data";
 
-const url = "api.zeptomail.com/";
+const url = "https://api.zeptomail.com/";
 // Ensure you have these in your .env.local file
 const token = process.env.ZEPTOMAIL_TOKEN;
 const fromEmail = process.env.ZEPTOMAIL_FROM_EMAIL;
