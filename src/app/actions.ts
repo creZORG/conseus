@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import { sendContactEmails } from "@/lib/mail";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -18,11 +19,10 @@ export async function handleContactForm(formData: FormData) {
     }
   
     try {
-      // In a real application, you would send an email, save to a database, etc.
-      console.log("Contact form submitted:", parsed.data);
+      await sendContactEmails(parsed.data);
       return { success: true };
     } catch (error) {
       console.error("Error handling contact form:", error);
-      return { success: false, errors: { _server: ["An unexpected error occurred."] } };
+      return { success: false, errors: { _server: ["An unexpected error occurred while sending the message."] } };
     }
 }
