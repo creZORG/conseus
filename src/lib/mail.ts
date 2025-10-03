@@ -92,7 +92,9 @@ export async function sendContactEmails(data: ContactFormData) {
     ]);
 
     if (userResult.status === 'rejected') {
-        console.error("Failed to send confirmation email to user:", userResult.reason);
+        const reason = userResult.reason as any;
+        const detailedError = reason?.message || JSON.stringify(reason);
+        console.error("Failed to send confirmation email to user:", detailedError);
     }
 
     if (companyResult.status === 'rejected') {
