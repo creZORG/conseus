@@ -5,9 +5,11 @@ const url = "api.zeptomail.com/";
 // Ensure you have these in your .env.local file
 const token = process.env.ZEPTOMAIL_TOKEN;
 const fromEmail = process.env.ZEPTOMAIL_FROM_EMAIL;
+const bounceEmail = process.env.ZEPTOMAIL_BOUNCE_EMAIL;
 
-if (!token || !fromEmail) {
-    console.error("ZeptoMail token or from email is not configured in environment variables.");
+
+if (!token || !fromEmail || !bounceEmail) {
+    console.error("ZeptoMail token, from email, or bounce email is not configured in environment variables.");
     throw new Error("Email service is not configured.");
 }
 
@@ -23,6 +25,7 @@ interface ContactFormData {
 export async function sendContactEmails(data: ContactFormData) {
     // 1. Send confirmation email to the user
     const userConfirmationPromise = client.sendMail({
+        bounce_address: bounceEmail,
         from: {
             address: fromEmail,
             name: `${companyInfo.name}`,
@@ -57,6 +60,7 @@ export async function sendContactEmails(data: ContactFormData) {
 
     // 2. Send notification email to the company
     const companyNotificationPromise = client.sendMail({
+        bounce_address: bounceEmail,
         from: {
             address: fromEmail,
             name: "New Website Inquiry",
