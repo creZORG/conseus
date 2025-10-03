@@ -172,11 +172,6 @@ export const certifications = [
         name: "Company Registration Certificate",
         image: getImage("certification-1"),
         description: "Official certificate of incorporation for Conquistar Enterprises Limited."
-    },
-    {
-        name: "Quality Assurance Seal",
-        image: getImage("certification-2"),
-        description: "Certified for meeting high standards of quality in all our products and services."
     }
 ];
 

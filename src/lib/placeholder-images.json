@@ -85,12 +85,6 @@
       "imageHint": "registration certificate"
     },
     {
-      "id": "certification-2",
-      "description": "Quality assurance approval seal.",
-      "imageUrl": "https://images.unsplash.com/photo-1742691857645-b2d01159e169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWFsaXR5JTIwc2VhbHxlbnwwfHx8fDE3NTkzMDA2Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "quality seal"
-    },
-    {
       "id": "blog-1",
       "description": "A container port with ships being loaded.",
       "imageUrl": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb250YWluZXIlMjBwb3J0fGVufDB8fHx8MTc1OTMwMDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
