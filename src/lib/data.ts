@@ -178,6 +178,7 @@ export const certifications = [
 
 export const contactMethods = [
     { icon: Mail, label: "Email", value: companyInfo.email1, href: `mailto:${companyInfo.email1}` },
+    { icon: Mail, label: "Email", value: companyInfo.email2, href: `mailto:${companyInfo.email2}` },
     { icon: Phone, label: "Phone", value: companyInfo.phone, href: `tel:${companyInfo.phone}` },
     { icon: MapPin, label: "Address", value: companyInfo.poBox }
 ];
@@ -205,4 +206,5 @@ export const blogPosts = [
         image: getImage("blog-3")
     }
 ];
+
     

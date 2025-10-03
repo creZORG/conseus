@@ -34,9 +34,9 @@ export default function CertificationsPage() {
             <CardFooter className="flex-col items-start p-6 bg-secondary/20">
               <h3 className="font-semibold text-lg">{cert.name}</h3>
               <p className="text-muted-foreground mt-2">{cert.description}</p>
-              {cert.image && (
+              {cert.image?.downloadUrl && (
                 <Button asChild className="mt-4" variant="outline">
-                  <Link href={cert.image.imageUrl} download target="_blank" rel="noopener noreferrer">
+                  <Link href={cert.image.downloadUrl} download target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Download
                   </Link>
