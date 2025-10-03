@@ -210,3 +210,4 @@ export const blogPosts = [
         image: getImage("blog-3")
     }
 ];
+    

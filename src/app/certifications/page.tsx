@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { certifications } from "@/lib/data";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function CertificationsPage() {
   return (
@@ -31,6 +34,14 @@ export default function CertificationsPage() {
             <CardFooter className="flex-col items-start p-6 bg-secondary/20">
               <h3 className="font-semibold text-lg">{cert.name}</h3>
               <p className="text-muted-foreground mt-2">{cert.description}</p>
+              {cert.image && (
+                <Button asChild className="mt-4" variant="outline">
+                  <Link href={cert.image.imageUrl} download target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download
+                  </Link>
+                </Button>
+              )}
             </CardFooter>
           </Card>
         ))}
@@ -38,3 +49,5 @@ export default function CertificationsPage() {
     </div>
   );
 }
+
+    
