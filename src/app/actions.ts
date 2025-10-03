@@ -20,9 +20,15 @@ export async function handleContactForm(formData: FormData) {
   
     try {
       await sendContactEmails(parsed.data);
-      return { success: true };
+      return { success: true, errors: null };
     } catch (error) {
       console.error("Error handling contact form:", error);
-      return { success: false, errors: { _server: ["An unexpected error occurred while sending the message."] } };
+      
+      const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
+      
+      return { 
+        success: false, 
+        errors: { _server: [errorMessage] } 
+      };
     }
 }
