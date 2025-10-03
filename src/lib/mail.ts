@@ -1,9 +1,11 @@
 import { companyInfo } from "./data";
 
 const url = "https://api.zeptomail.com/v1.1/email";
-const token = process.env.ZEPTOMAIL_TOKEN;
-const fromEmail = process.env.ZEPTOMAIL_FROM_EMAIL;
-const bounceEmail = process.env.ZEPTOMAIL_BOUNCE_EMAIL;
+// Hardcoded token for testing, as requested.
+const token = "Zoho-enczapikey wSsVR610qR+mWqoum2WoculrkAkHUVP/FBl6jADyuH+tFvqW9Mc+nk2YAASlTfMbQzVpFGNApbl4nh5T12Za3Y8pzVpVDyiF9mqRe1U4J3x17qnvhDzPVmRblRGLL4gOwwxjkmRgFsEh+g==";
+// Hardcoded from/bounce addresses for testing.
+const fromEmail = "noreply@conquistar.co.ke";
+const bounceEmail = "noreply@conquistar.co.ke";
 
 interface ContactFormData {
     name: string;
@@ -13,17 +15,12 @@ interface ContactFormData {
 }
 
 async function sendZeptoEmail(payload: object) {
-    if (!token || !fromEmail || !bounceEmail) {
-        console.error("ZeptoMail token, from email, or bounce email is not configured in environment variables.");
-        throw new Error("Email service is not configured.");
-    }
-
     try {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token, // The token already includes "Zoho-enczapikey " part
+                'Authorization': token,
             },
             body: JSON.stringify(payload),
         });
@@ -31,21 +28,21 @@ async function sendZeptoEmail(payload: object) {
         const responseText = await response.text();
         
         if (!response.ok) {
-            // Log server response for debugging
             console.error(`ZeptoMail API Error: Status ${response.status}`, responseText);
             throw new Error(`Failed to send email. Status: ${response.status}. Response: ${responseText}`);
         }
         
-        // Even successful responses might not be JSON, handle gracefully
         try {
             return JSON.parse(responseText);
         } catch (e) {
-            // If parsing fails, just return the raw text
             return responseText;
         }
 
     } catch (error) {
         console.error("Error during fetch operation:", error);
+        if (error instanceof Error) {
+            throw new Error(`Failed to communicate with the email service. ${error.message}`);
+        }
         throw new Error("Failed to communicate with the email service.");
     }
 }
