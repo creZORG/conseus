@@ -2,8 +2,14 @@ import { SendMailClient } from "zeptomail";
 import { companyInfo } from "./data";
 
 const url = "api.zeptomail.com/";
-const token = process.env.ZEPTOMAIL_TOKEN as string;
-const fromEmail = process.env.ZEPTOMAIL_FROM_EMAIL as string;
+// Ensure you have these in your .env.local file
+const token = process.env.ZEPTOMAIL_TOKEN;
+const fromEmail = process.env.ZEPTOMAIL_FROM_EMAIL;
+
+if (!token || !fromEmail) {
+    console.error("ZeptoMail token or from email is not configured in environment variables.");
+    throw new Error("Email service is not configured.");
+}
 
 const client = new SendMailClient({ url, token });
 
@@ -84,9 +90,14 @@ export async function sendContactEmails(data: ContactFormData) {
     if (userResult.status === 'rejected') {
         console.error("Failed to send confirmation email to user:", userResult.reason);
     }
+
     if (companyResult.status === 'rejected') {
-        console.error("Failed to send notification email to company:", companyResult.reason);
-        // If company notification fails, we must throw an error.
-        throw new Error("Failed to send notification email to company.");
+        // Log the detailed error from the mail service
+        const reason = companyResult.reason as any;
+        const detailedError = reason?.message || JSON.stringify(reason);
+        console.error("Failed to send notification email to company:", detailedError);
+        
+        // Throw a more specific error
+        throw new Error(`Failed to send notification email. Reason: ${detailedError}`);
     }
 }
