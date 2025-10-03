@@ -1,3 +1,4 @@
+
 "use server";
 
 import { z } from "zod";
@@ -24,7 +25,7 @@ export async function handleContactForm(formData: FormData) {
     } catch (error) {
       console.error("Error handling contact form:", error);
       
-      const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
+      const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred while sending the email.";
       
       return { 
         success: false, 
